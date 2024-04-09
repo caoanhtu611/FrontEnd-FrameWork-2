@@ -90,7 +90,7 @@ const EditProduct = () => {
           formData.append("file", value[0]);
           formData.append("upload_preset", "dmwgp0bx");
           const response = await axios.post(
-            "https://api.cloudinary.com/v1_1/dbmj1ajrv/image/upload",
+            "https://api.cloudinary.com/v1_1/djz8utyvm/image/upload",
             formData
           );
           if (response.status == 200) {
