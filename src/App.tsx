@@ -24,25 +24,26 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' Component={LayoutClient}>
-            <Route path='' Component={Home} />
-            <Route path='products/:id' Component={ListProduct} />
-            <Route path='detail/:id' Component={DetailProduct} />
-            <Route path='login' Component={Login} />
-            <Route path='register' Component={Register} />
-            <Route path='search/:search' Component={SearchProduct} />
+          <Route path="/" Component={LayoutClient}>
+            <Route path="" Component={Home} />
+            <Route path="products" Component={ListProduct} />
+            <Route path="detail/:id" Component={DetailProduct} />
+            <Route path="login" Component={Login} />
+            <Route path="register" Component={Register} />
+            <Route path="search/:search" Component={SearchProduct} />
           </Route>
           <Route
-            path='/dashbroad'
+            path="/dashboard"
             element={
               <PrivateRouter>
                 <LayoutAdmin />
               </PrivateRouter>
-            }>
-            <Route path='' Component={DashBoard} />
-            <Route path='add_product' Component={AddProduct} />
-            <Route path='list_product' Component={ListProductAdmin} />
-            <Route path='edit_product/:id' Component={EditProduct} />
+            }
+          >
+            <Route path="" Component={DashBoard} />
+            <Route path="addproduct" Component={AddProduct} />
+            <Route path="listproduct" Component={ListProductAdmin} />
+            <Route path="editproduct/:id" Component={EditProduct} />
           </Route>
         </Routes>
       </BrowserRouter>
